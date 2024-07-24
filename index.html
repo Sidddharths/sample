@@ -4,11 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample MERN</title>
+
+    <style>
+        @keyframes Rgb {
+  from {
+    color: #d111f3;
+  }
+  15% {
+    color: #ff008c;
+  }
+  30% {
+    color: #cf390b;
+  }
+  45% {
+    color: #ef810b;
+  }
+  60% {
+    color: #e4e135;
+  }
+  75% {
+    color: #3be435;
+  }
+  90% {
+    color: #353be4;
+  }
+  100% {
+    color: #d835e4;
+  }
+}
+
+@keyframes backgroundRgb {
+  from {
+    background-color: #d111f3;
+    
+  }
+  15% {
+    background-color: #ff008c;
+    
+  }
+  30% {
+    background-color: #cf390b;
+    
+  }
+  45% {
+    background-color: #ef810b;
+
+  }
+  60% {
+    background-color: #e4e135;
+  }
+  75% {
+    background-color: #3be435;
+  }
+  90% {
+    background-color: #353be4;
+  }
+  100% {
+    background-color: #d835e4;
+  }
+}
+
+.rainbow{
+    text-align: center;
+    animation: Rgb 1s linear 0s infinite;
+    text-decoration-color: aliceblue;
+}
+
+div{
+    animation: backgroundRgb 1s linear 0s infinite;
+    width: 310px;
+  height: 180px;
+  display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 ;
+  
+
+}
+@keyframes moveBullet {
+            0% {
+                transform: translateX(1400px);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+.bullet{
+    height: 100px;
+    width:100px;
+    position: absolute;
+    animation: moveBullet 1.25s linear infinite;
+}
+
+    </style>
     
 </head>
 <body style="background-image: url(https://wallpapercave.com/wp/wp3384701.jpg) ;  color: #FFFF" >
     <header>
-        <h1>Learning MERN From Rampex Technologies</h1>
+        <h1 style="text-align: center;">Learning <b class="rainbow"> MERN </b>From <b class="rainbow">Rampex </b>Technologies</h1>
         <h2>Creating our portfolio</h2>
     </header>
     <section>
@@ -26,11 +119,16 @@
             Aenean laoreet non ligula fermentum feugiat. Praesent dignissim iaculis dolor, in aliquam augue condimentum at. Donec semper ut lorem ac vulputate. Vestibulum quis diam non metus luctus consequat sed ut lorem. Aenean ut elementum metus. Suspendisse ipsum tortor, efficitur ut sem ut, dapibus elementum orci. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
     </section>
     <section>
+<img class= "bullet" src="https://pngimg.com/d/bullets_PNG1468.png"></img>
+    </section><br><br><br>
+    <section>
         <h4>How to make an image a hyperlink?</h4>
         <p>Answer:</p>
-        <a href="hhttps://indianarmy.nic.in/">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdFcbY9c1cyQ4tUDRZh5C6PXGRvcbD6MAhg&s" alt="https://groww.in/stocks">
+        <div>
+        <a href="https://indianarmy.nic.in/">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdFcbY9c1cyQ4tUDRZh5C6PXGRvcbD6MAhg&s">
     </a>
+</div>
     </section>
     <section>
         <h3>Git Commands</h3>
