@@ -1,10 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sample MERN</title>
-
+  
+    <title>Siddharth S</title>
     <style>
-        @keyframes Rgb {
+      html{
+            scroll-behavior: smooth;
+            
+      }
+        body {
+            font-family: Arial, sans-serif; 
+            height: 100%; 
+            padding-top:0;
+            
+        }
+        header {
+            background-color: rgba(244,244,244);
+            color: #333;
+            text-align: center;
+            border-radius: 25px;
+            padding: 5px;
+            max-width: 910px;
+            margin: auto;
+        }
+        
+
+        nav ul li {
+            display: inline;
+            margin: 15px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+       
+        main {
+            padding: 60px;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(244,244,244);
+            border-radius: 25px;
+            
+        }
+        header:hover,main:hover,#home:hover{
+  animation: shadow 1.3s infinite;
+}
+        
+        
+        h2 {
+            font-size: 1.5em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            animation: line 3s infinite;
+            padding-bottom: 7px;
+        }
+
+        button{
+          cursor: pointer;
+          /* border: none;
+          background-color: rgb(149, 33, 226); */
+        }
+        
+
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            
+        }
+
+        
+        
+        a:hover {
+    animation: colorRgb 1.2s  infinite;
+}
+
+.rainbow {
+  
+  font-size: 48px;
+  font-family: monospace;
+  letter-spacing: 3px;
+  animation: colorRotate 1s infinite;
+}
+
+
+
+
+@keyframes line {
+  from {
+    border-bottom: 1.75px solid #d111f3;
+  }
+  15% {
+    border-bottom: 1.75px solid #ff008c;
+  }
+  
+  45% {
+    border-bottom: 1.75px solid #ef810b;
+  }
+  60% {
+    border-bottom: 1.75px solid #e4e135;
+  }
+  75% {
+    border-bottom: 1.75px solid #3be435;
+  }
+  90% {
+    border-bottom: 1.75px solid #353be4;
+  }
+  100% {
+    border-bottom: 1.75px solid #d835e4;
+  }
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: 10px 10px  #d111f3;
+  }
+  15% {
+    box-shadow: 10px 10px #ff008c;
+  }
+  30% {
+    box-shadow: 10px 10px #cf390b;
+  }
+  45% {
+    box-shadow: 10px 10px #ef810b;
+  }
+  60% {
+    box-shadow: 10px 10px #e4e135;
+  }
+  75% {
+    box-shadow:10px 10px #3be435;
+  }
+  90% {
+    box-shadow: 10px 10px #353be4;
+  }
+  100% {
+    box-shadow: 10px 10px #d835e4;
+  }
+}
+
+@keyframes  colorRgb {
   from {
     color: #d111f3;
   }
@@ -31,116 +170,158 @@
   }
 }
 
-@keyframes backgroundRgb {
+@keyframes colorRotate {
   from {
-    background-color: #d111f3;
-    
+    color: #ebf311;
   }
-  15% {
-    background-color: #ff008c;
-    
+  10% {
+    color: #ff00bb;
   }
-  30% {
-    background-color: #cf390b;
-    
-  }
-  45% {
-    background-color: #ef810b;
-
-  }
-  60% {
-    background-color: #e4e135;
+  50% {
+    color: #9e0bcf;
   }
   75% {
-    background-color: #3be435;
-  }
-  90% {
-    background-color: #353be4;
+    color: #0becef;
   }
   100% {
-    background-color: #d835e4;
+    color: #35aae4;
   }
 }
 
-.rainbow{
-    text-align: center;
-    animation: Rgb 1s linear 0s infinite;
-    text-decoration-color: aliceblue;
+#home{
+  padding: 60px;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(244,244,244);
+            border-radius: 25px;
 }
 
-div{
-    animation: backgroundRgb 1s linear 0s infinite;
-    width: 310px;
-  height: 180px;
-  display: flex;
-justify-content: center;
-align-items: center;
-margin: 0 ;
-  
-
-}
-@keyframes moveBullet {
-            0% {
-                transform: translateX(1400px);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+#video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
-.bullet{
-    height: 100px;
-    width:100px;
-    position: absolute;
-    animation: moveBullet 1.25s linear infinite;
-}
+.bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            
+        }
 
-    </style>
-    
+
+</style>
 </head>
-<body style="background-image: url(https://wallpapercave.com/wp/wp3384701.jpg) ;  color: #FFFF" >
-    <header>
-        <h1 style="text-align: center;">Learning <b class="rainbow"> MERN </b>From <b class="rainbow">Rampex </b>Technologies</h1>
-        <h2>Creating our portfolio</h2>
-    </header>
-    <section>
-        <h3>Abbreviation of MERN:</h3>
+
+<body>
+  <div class="bg">
+    <video autoplay muted loop id="video">
+      <source src="bg.mp4" type="video/mp4">
+    </video>  
+  </div>
+  <header >  
+    <nav style="text-align: center;" >
         <ul>
-            <li>M - MongoDB</li>
-            <li>E - ExpressJS</li>
-            <li>R - ReactJS</li>
-            <li>N - NodeJS</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#skills">Tools</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button style="background-color: aliceblue; border-radius:5cm;" onclick="viewResume()">View Resume</button></li>
         </ul>
-    </section>
-    <section >
-        <h4>Type 200 Words in 2 Sec?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet hendrerit egestas. Sed sed est est. Sed commodo tempus tortor eget consequat. Nulla facilisi. Vivamus sodales dictum felis, a volutpat lectus eleifend vel. Quisque quis sodales tellus. Aenean porta vestibulum est, venenatis fringilla mauris volutpat sed. Sed ultrices velit eros, vel imperdiet turpis lacinia nec. Duis porttitor tincidunt pharetra. Proin sed cursus mi, vel imperdiet metus. Nunc eleifend pellentesque leo, ac aliquet elit finibus vitae. Donec molestie nisl vel eros tristique, non vulputate ipsum tristique. Aliquam vestibulum, risus in tempor condimentum, orci nisl efficitur libero, non posuere lacus leo non ante. Nulla facilisi. Cras interdum vulputate nisi vitae tempor.
-            Aenean laoreet non ligula fermentum feugiat. Praesent dignissim iaculis dolor, in aliquam augue condimentum at. Donec semper ut lorem ac vulputate. Vestibulum quis diam non metus luctus consequat sed ut lorem. Aenean ut elementum metus. Suspendisse ipsum tortor, efficitur ut sem ut, dapibus elementum orci. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-    </section>
-    <section>
-<img class= "bullet" src="https://pngimg.com/d/bullets_PNG1468.png"></img>
-    </section><br><br><br>
-    <section>
-        <h4>How to make an image a hyperlink?</h4>
-        <p>Answer:</p>
-        <div>
-        <a href="https://indianarmy.nic.in/">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdFcbY9c1cyQ4tUDRZh5C6PXGRvcbD6MAhg&s">
-    </a>
-</div>
-    </section>
-    <section>
-        <h3>Git Commands</h3>
-        <ul>
-            <li>git init</li>
-            <li>git add</li>
-            <li>git status</li>
-            <li>git diff</li>
-            <li>git commit</li>
-            <li>git branch</li>
-            <li>git remote</li>
-            <li>git push</li>
-            <li>git log</li>
+    </nav>
+</header>
+<br>
+
+    
+      <section id = "home">
+      <h1 class = "rainbow" style="text-align: left; font-size: 88px; margin: 0;">SIDDHARTH</h1>
+        <n style="text-align: left; padding-top: 10px; color: #777; padding-left: 5px;">Front End Developer</n>
+      </section>
+      <br>
+      <main>
+      <section id = "about">
+            <h2 style="padding-top:20px ;">About</h2>
+            <p>I’m a <a href="#">Front End Developer</a> whose passion is to create emotional experiences at the intersection of art, design, and AI .
+                My work involves crafting visually stunning and user-friendly interfaces that not only engage users but also evoke a
+                deeper connection through innovative design principles. </p>
+                <br>
+      </section>
+      <section id="writing">
+            <h2>Writing</h2>
+            <p>Some of my essays were featured on FastCompany, TNW, Smashing Magazine, and Medium.
+              Check my latest writings on <a href="#">Medium</a>, <a href="#">Buswanth Magazine</a>, and <a href="#">Kiruturam Design</a>.</p>
+              <br>
+            </section>
+            
+<section id="skills" style="line-height: 150%;">
+            <h2>Skills</h2>
+        <ul style="padding-left: 20px;">
+            
+            <li><b><a href="#">Languages:</a></b> Kotlin, Jetpack Compose, C++, Java, Python, Javascript, HTML, CSS, SQL</li>
+            <li><b><a href="#">Developer tools:</a></b> Android Studio, Figma, Git, IDE (VS Code, Pycharm, IntelliJ)</li>
+            <li><b><a href="#">Hardware:</a></b> Arduino, Raspberry, Esp32</li>
+            
         </ul>
+      </section>
+      <br>
+      <section id="projects" style="line-height: 1.6;">
+        <h2>Projects</h2>
+        <b style="font-size: 1.15em;"><a href="#">Movie Theater Ticket Booking System: </a></b>
+        Developed a comprehensive full-stack movie ticket booking application using Python Tkinter and MySQL for the back end.
+          Users can browse movies, select showtimes, and reserve tickets. Features include seat selection, booking confirmation, and real-time database management.
+    
+<br>
+<br>
+        <b style="font-size: 1.15em; line-height: 1.6;"><a href="#">Car Soccer Game: </a></b>
+        Designed and developed a dynamic 2-dimensional multiplayer game using C# and the Unity Game Engine. The game features player-controlled cars in a arena, where they compete to score goals. 
+          Implemented physics-based mechanics for realistic car movements and ball interactions, as well as a networking system for seamless multiplayer gameplay.
+        
+<br>
+<br>
+        <b style="font-size: 1.15em;"><a href="#">Tip Calculator App: </a></b>
+        Developed a Tip Calculator App using Android Studio with Kotlin and Jetpack Compose.
+           The app allows users to calculate tip percentage and total bill with a simple UI. Features include customizable tips, split bill, and real-time updates.
+           This project highlights skills in mobile app development, UI/UX design, and modern Android tools.
+     <br>   
+     <br>
     </section>
+    <br>
+
+<section id="contact" >
+            <h2>Contact</h2>
+            <a href="siddharthsaravanan29@gmail.com"><p><i><u>siddharthsaravanan29@gmail.com</a></u></i></p>
+
+            <a href="https://www.linkedin.com/" style="padding-right: 7px;">
+              <img width="30px" height="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png">
+          </a>
+          <a href="https://github.com/" style="padding-right: 7px;">
+            <img width="30px" height="30px" src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+        </a>
+          <a href="https://www.x.com/" style="padding-right: 7px;">
+            <img width="30px" height="30px" src="https://www.freepnglogos.com/uploads/twitter-x-logo-png/twitter-x-logo-png-9.png">
+        </a>
+
+      </section>
+
+            <!-- <img style="border-radius: 100%; width: 100px; height: 100px;" src="https://media.licdn.com/dms/image/D5603AQElQG5K1DC6Ig/profile-displayphoto-shrink_400_400/0/1720815490190?e=1727308800&v=beta&t=feg3W4UbfVgz_obT8IrjpR0Xa2Z49j-hL_KnsvlzDCw">
+            </img>-->
+        
+    </main>
+    <!-- <script>
+      function viewResume() {
+          window.open('Resume.pdf', '_blank');
+      }
+      </script> -->
 </body>
+
 </html>
